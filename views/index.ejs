@@ -6,7 +6,11 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <% for prop in books %>
-    
+    <% for (var i = 0; i < books.length; i++) { %>
+      <p><%= books[i].title %> by <%= books[i].author %><br>
+        <% if (books[i].book_image) { %>
+        <img src="<%= books[i].book_image %>">
+        <% } %></p>
+      <% } %>
   </body>
 </html>
